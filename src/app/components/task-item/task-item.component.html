@@ -1,0 +1,13 @@
+<div class="task" [ngClass]="{reminder: task.reminder}" >
+    <h3>
+        {{task.text}} 
+        <div class="iconstaskitem">
+            <fa-icon *ngIf="!task.reminder" class="taskbell" [icon]="fabell" [ngStyle]="{color:'red'}" (click)="onToggle(task)"></fa-icon>
+            <fa-icon *ngIf="task.reminder" class="taskbell" [icon]="fabellslash" [ngStyle]="{color:'red'}" (click)="onToggle(task)"></fa-icon>
+            <fa-icon [icon]="fatrash" [ngStyle]="{color:'red'}" (click)="onDelete(task)"></fa-icon>
+     
+        </div>
+    </h3>
+    <p>{{task.day}}</p>
+    <p></p>
+</div>

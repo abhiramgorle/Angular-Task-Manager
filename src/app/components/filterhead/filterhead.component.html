@@ -1,0 +1,16 @@
+<div class="filterhead" *ngIf="showFilter">
+    <form class="add-filter" (ngSubmit)="onSubmit()"   >
+        <div class="form-control-half">
+            <label for="filter">Filter</label>
+        <select name = "priority" [(ngModel)]="priority" id = "priority" >
+            <option [value]="0"></option>
+            <option [value]="5" [ngStyle]="{color:'red'}">Very High Priority  </option>
+            <option [value]="4" [ngStyle]="{color:'orange'}">High Priority </option>
+            <option [value]="3" [ngStyle]="{color:'green'}">Medium Priority </option>
+            <option [value]="2" [ngStyle]="{color:'blue'}">Low Priority </option>
+            <option [value]="1" [ngStyle]="{color:'skyblue'}">Very Low Priority </option>
+        </select>
+        </div>
+        <input type="submit" value="Show" class="btn">
+    </form>
+</div>
